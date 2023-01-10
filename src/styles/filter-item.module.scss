@@ -1,0 +1,29 @@
+.filter {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+
+  label {
+    color: #00e25a;
+    width: fit-content;
+    margin-bottom: 5px;
+  }
+
+  select {
+    border: #00e25a 1px solid;
+    border-radius: 7px;
+    background-color: #a8a8a8;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 640px) {
+    width: 500px;
+  }
+}

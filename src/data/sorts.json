@@ -1,0 +1,8 @@
+[
+  { "id": 1, "name": "the most popular movies", "param": "popularity.desc" },
+  { "id": 2, "name": "the worst popular movies", "param": "popularity.asc" },
+  { "id": 3, "name": "the last movies", "param": "primary_release_date.desc" },
+  { "id": 4, "name": "the oldest movie", "param": "release_date.asc" },
+  { "id": 5, "name": "the best vote average", "param": "vote_average.desc" },
+  { "id": 6, "name": "the worst vote average", "param": "vote_average.asc" }
+]

@@ -1,0 +1,50 @@
+.infosContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  .imageContainer {
+    width: 150px;
+    flex-shrink: 0;
+    height: 200px;
+    border-radius: 7px;
+    padding: 2px;
+    background-color: rgba(140, 140, 140, 0.903);
+
+    .movieImage {
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+      border-radius: 7px;
+    }
+  }
+
+  .infos {
+    padding: 5px;
+
+    p {
+      margin-bottom: 5px;
+      color: #00ba4a;
+
+      span {
+        color: #000;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+.fetch {
+  font-size: 24px;
+  color: #00ba4a;
+  font-weight: 500;
+  text-align: center;
+}

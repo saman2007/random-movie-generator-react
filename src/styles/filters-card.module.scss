@@ -1,0 +1,44 @@
+.about {
+  display: flex;
+  width: 100%;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  h1 {
+    color: #00e25a;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  p {
+    color: #00e25a;
+    text-align: center;
+  }
+}
+
+.filtersContainer {
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.backdrop {
+  border-radius: 7px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.648);
+  transition: 300ms;
+}

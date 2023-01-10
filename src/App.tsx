@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import { QueryClient, QueryClientProvider } from "react-query";
+import FiltersCard from "./components/Filters/FiltersCard";
+import RandomMovieCard from "./components/RandomMovie/RandomMovieCard";
+import AppWrapper from "./components/Wrapper/AppWrapper";
+
+const queryClient = new QueryClient();
+
+const api = axios.create({
+  baseURL: `${process.env.REACT_APP_API_URL}`,
+  params: {
+    api_key: process.env.REACT_APP_API_KEY,
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <AppWrapper>
+        <FiltersCard />
+        <RandomMovieCard />
+      </AppWrapper>
+    </QueryClientProvider>
   );
 }
-
+export { api };
 export default App;

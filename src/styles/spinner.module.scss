@@ -1,0 +1,15 @@
+.spinner_container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  padding: 10px;
+  background-color: rgba(204, 204, 204, 0.632);
+  border: #00e25a 2px solid;
+
+  p {
+    color: #00e25a;
+    margin-top: 10px;
+  }
+}
