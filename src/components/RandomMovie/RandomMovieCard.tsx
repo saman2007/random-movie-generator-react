@@ -6,8 +6,6 @@ const RandomMovieCard = () => {
   const { data: initDatas }: any = useFetchedData("init datas");
   const { data }: any = useFetchedData("random movie");
 
-  console.log(data);
-
   const getGenres = () => {
     const results: string[] = [];
 
@@ -43,6 +41,15 @@ const RandomMovieCard = () => {
             </p>
             <p>
               genres: <span>{getGenres()}</span>
+            </p>
+            <p>
+              popularity: <span>{data.popularity}</span>
+            </p>
+            <p>
+              vote average: <span>{data.vote_average}</span>
+            </p>
+            <p>
+              vote count: <span>{data.vote_count}</span>
             </p>
           </div>
         </div>

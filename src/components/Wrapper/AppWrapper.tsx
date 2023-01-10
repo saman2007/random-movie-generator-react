@@ -19,7 +19,12 @@ const AppWrapper = ({ children }: Props) => {
   const { status } = useQuery("init datas", getInitialDatas);
 
   let statusElement = <></>;
-  if (status === "loading") statusElement = <Spinner text="initializing..." />;
+  if (status === "loading")
+    statusElement = (
+      <div className={classes.loadingContainer}>
+        <Spinner text="initializing..." />
+      </div>
+    );
   else if (status === "error")
     statusElement = (
       <ErrorMessage text="something went wrong! please refresh this page and turn on your VPN." />
